@@ -1,0 +1,199 @@
+{
+    "artifact": {
+        "groupId": "org.forgerock.opendj",
+        "artifactId": "opendj-server",
+        "version": "8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7"
+    },
+    "copyrights": [
+        "Copyright 2010-2025 Ping Identity Corporation",
+        "Copyright 2013-2017 Dropwizard contributors",
+        "Copyright 2011-2012 profiq, s.r.o.",
+        "Copyright 2002-2011 Sun Microsystems, Inc",
+        "Copyright 2000-2011 The Legion Of The Bouncy Castle",
+        "Copyright 1984-1988 AT",
+        "Portions Copyright 2010-2025 Ping Identity Corporation",
+        "Portions Copyright 2016-2018 David Karnok",
+        "Portions Copyright 2016 present, RxJava Contributors",
+        "Portions Copyright 2015 Edan Idzerda",
+        "Portions Copyright 2014 Emidio Stani",
+        "Portions Copyright 2012-2014 Manuel Gaupp",
+        "Portions Copyright 2014 The Apache Software Foundation",
+        "Portions Copyright 2012 Dariusz Janny",
+        "Portions Copyright 2011 profiq, s.r.o.",
+        "Portions Copyright 2009 Parametric Technology Corporation",
+        "Portions Copyright 2006-2008 Sun Microsystems, Inc",
+        "Portions Copyright 2006-2007 Brighton Consulting, Inc"
+    ],
+    "dependencies": {
+        "api-descriptor-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2015-2025 ForgeRock AS"
+        ],
+        "aws-s3-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "azureblob-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "chf-client-apache-async-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2015-2024 ForgeRock AS"
+        ],
+        "chf-client-apache-common-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2015-2024 ForgeRock AS"
+        ],
+        "chf-http-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2012-2025 ForgeRock AS",
+            "Copyright 2009-2024 Sun Microsystems, Inc",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Portions Copyright 2011-2025 ForgeRock AS",
+            "Portions Copyright 2010-2011 ApexIdentity Inc"
+        ],
+        "chf-oauth2-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2014-2024 ForgeRock AS"
+        ],
+        "config-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2017-2024 ForgeRock AS"
+        ],
+        "forgerock-audit-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2013-2025 ForgeRock AS",
+            "Copyright 2013 Cybernetica AS",
+            "Copyright 2006-2008 Sun Microsystems, Inc",
+            "Portions Copyright 2013-2024 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-json-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2016-2024 ForgeRock AS"
+        ],
+        "forgerock-audit-handler-json-stdout-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2018-2020 ForgeRock AS"
+        ],
+        "forgerock-audit-json-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2015-2024 ForgeRock AS"
+        ],
+        "forgerock-util-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2011-2025 ForgeRock AS",
+            "Copyright 2014-2015 Stack overflow users",
+            "Copyright 2010-2011 ApexIdentity Inc",
+            "Portions Copyright 2011-2025 ForgeRock AS"
+        ],
+        "google-cloud-storage-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "googlecloud-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "jclouds-blobstore-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "jclouds-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2011-2025 ForgeRock AS"
+        ],
+        "json-resource-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2012-2024 ForgeRock AS"
+        ],
+        "json-schema-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2011-2025 ForgeRock AS"
+        ],
+        "json-web-token-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2011-2025 ForgeRock AS"
+        ],
+        "monitoring-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2018-2024 ForgeRock AS",
+            "Copyright 2017 Pivotal Software, Inc",
+            "Portions Copyright 2018-2024 ForgeRock AS"
+        ],
+        "monitoring-dropwizard-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2018-2024 ForgeRock AS",
+            "Copyright 2017 Pivotal Software, Inc",
+            "Portions Copyright 2018-2024 ForgeRock AS"
+        ],
+        "monitoring-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2017-2024 ForgeRock AS",
+            "Copyright 2016-2018 Prometheus contributors",
+            "Portions Copyright 2018-2024 ForgeRock AS"
+        ],
+        "monitoring-json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2017-2025 ForgeRock AS"
+        ],
+        "oauth-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "opendj-cli-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2013-2025 Ping Identity Corporation",
+            "Copyright 2006-2010 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2025 Ping Identity Corporation",
+            "Portions Copyright 2011 Nemanja Lukic",
+            "Portions Copyright 2009 Parametric Technology Corporation"
+        ],
+        "opendj-config-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2011-2025 Ping Identity Corporation",
+            "Copyright 2006-2010 Sun Microsystems, Inc",
+            "Portions Copyright 2010-2025 Ping Identity Corporation",
+            "Portions Copyright 2015 Edan Idzerda",
+            "Portions Copyright 2012-2014 Manuel Gaupp",
+            "Portions Copyright 2012 profiq, s.r.o.",
+            "Portions Copyright 2007-2010 Sun Microsystems, Inc"
+        ],
+        "opendj-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2011-2025 Ping Identity Corporation",
+            "Copyright 2016 present, RxJava Contributors",
+            "Copyright 2013-2014 Manuel Gaupp",
+            "Copyright 2006-2011 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2025 Ping Identity Corporation",
+            "Portions Copyright 2016 Matthew Stevenson",
+            "Portions Copyright 2014 Calendar",
+            "Portions Copyright 2012-2014 Manuel Gaupp",
+            "Portions Copyright 2009 D. J. Hagberg, Millibits Consulting, Inc"
+        ],
+        "opendj-je-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2011-2025 Ping Identity Corporation",
+            "Copyright 2002-2018 Oracle and",
+            "Copyright 2016-2017 Clifton Labs",
+            "Portions Copyright 2024-2025 Ping Identity Corporation"
+        ],
+        "opendj-ldap-toolkit-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2016-2025 ForgeRock AS",
+            "Copyright 2011-2025 Ping Identity Corporation",
+            "Copyright 2006-2010 Sun Microsystems, Inc",
+            "Portions Copyright 2011-2025 Ping Identity Corporation"
+        ],
+        "opendj-opentelemetry-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2024-2025 Ping Identity Corporation",
+            "Copyright 2006-2008 Sun Microsystems, Inc",
+            "Portions Copyright 2017-2025 Ping Identity Corporation"
+        ],
+        "opendj-parent-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2011-2025 Ping Identity Corporation"
+        ],
+        "opendj-password-hashing-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2024-2025 Ping Identity Corporation",
+            "Copyright 2006 Damien Miller",
+            "Portions Copyright 2015-2025 Ping Identity Corporation"
+        ],
+        "opendj-rest2ldap-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Copyright 2012-2025 Ping Identity Corporation"
+        ],
+        "opentelemetry-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2024-2025 ForgeRock AS"
+        ],
+        "s3-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ],
+        "secrets-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2017-2024 ForgeRock AS"
+        ],
+        "secrets-backend-keystore-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2017-2024 ForgeRock AS"
+        ],
+        "secrets-backend-propertyresolver-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2018-2024 ForgeRock AS"
+        ],
+        "security-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982": [
+            "Copyright 2013-2024 ForgeRock AS"
+        ],
+        "sts-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7": [
+            "Portions Copyright 2022-2025 Ping Identity Corporation"
+        ]
+    }
+}

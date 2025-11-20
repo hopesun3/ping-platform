@@ -1,0 +1,65 @@
+services:
+  ds:
+    build:
+      context: .
+      dockerfile: ds/Dockerfile
+    container_name: ds
+    hostname: ds.example.com
+    environment:
+      DEPLOYMENT_ID_PASSWORD: "Welcome123"
+
+      ROOT_USER_DN: "uid=admin"
+      ROOT_USER_PASSWORD: "str0ngAdm1nPa55word"
+      MONITOR_USER_PASSWORD: "str0ngMon1torPa55word"
+
+      HOSTNAME: "ds.example.com"
+      ADMIN_CONNECTOR_PORT: "4444"
+      LDAP_PORT: "1389"
+      LDAPS_PORT: "1636"
+
+      AM_CONFIG_ADMIN_PASSWORD: "5up35tr0ng"
+      AM_CTS_ADMIN_PASSWORD: "5up35tr0ng"
+      AM_IDENTITY_STORE_ADMIN_PASSWORD: "5up35tr0ng"
+    ports:
+      - "1389:1389"
+      - "1636:1636"
+      - "4444:4444"
+    volumes:
+      - ds-data:/opt/ds      # 🔹 DS data/config persisted
+      - ds-shared:/shared    # 🔹 CA cert shared with AM
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "bash",
+          "-c",
+          "[ -x /opt/ds/bin/status ] && /opt/ds/bin/status --script-friendly --hostname localhost --port 4444 --bindDN uid=admin --bindPassword str0ngAdm1nPa55word --trustAll || exit 1"
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 30s
+
+  am:
+    build:
+      context: .
+      dockerfile: am/Dockerfile
+    container_name: am
+    depends_on:
+      ds:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      JAVA_CACERTS_PASSWORD: "changeit"
+      DS_CA_ALIAS: "ds8ca"
+    volumes:
+      - am-config:/opt/config/am  # 🔹 AM config dir (installer will use this)
+      - ds-shared:/shared         # 🔹 DS CA cert from DS
+
+volumes:
+  ds-data:
+  ds-shared:
+  am-config:
+

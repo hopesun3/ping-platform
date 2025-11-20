@@ -1,0 +1,204 @@
+#!/bin/sh
+#
+# The contents of this file are subject to the terms of the Common Development and
+# Distribution License (the License). You may not use this file except in compliance with the
+# License.
+#
+# You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License for the
+# specific language governing permission and limitations under the License.
+#
+# When distributing Covered Software, include this CDDL Header Notice in each file and include
+# the License file at legal/CDDLv1.0.txt. If applicable, add the following below the CDDL
+# Header, with the fields enclosed by brackets [] replaced by your own identifying
+# information: "Portions Copyright [year] [name of copyright owner]".
+#
+# Copyright 2006-2009 Sun Microsystems, Inc.
+# Portions Copyright 2011-2025 Ping Identity Corporation.
+
+
+# Capture the current working directory so that we can change to it later.
+# Then capture the location of this script and the Directory Server instance
+# root so that we can use them to create appropriate paths.
+WORKING_DIR=`pwd`
+
+cd "`dirname "${0}"`"
+SCRIPT_DIR=`pwd`
+
+cd ..
+INSTALL_ROOT=`pwd`
+export INSTALL_ROOT
+
+cd "${WORKING_DIR}"
+
+
+# Specify the script name so that it may be provided in command-line usage.
+SCRIPT_NAME="start-ds"
+export SCRIPT_NAME
+
+# check for presence of lib/_svc-opendj.sh file
+# If present, we should be on Solaris/OpenSolaris and use SMF to start
+# OpenDJ.
+# Check --exec. If not present, start OpenDJ from SMF
+
+if test -f "${INSTALL_ROOT}/lib/_svc-opendj.sh"
+then
+    if [ "$1" = "--exec" ]
+    then
+        shift
+    elif [ -z "$1" -o "$1" = "-L" -o "$1" = "-Q" -o "$1" = "-N" -o \
+     "$1" = "--nodetach" -o "$1" = "-useLastKnownGoodConfig" \
+     -o "$1" = "--quiet" ]
+    then
+# these options are only used when trying to start the server
+# In this case, start it through the service.
+        exec /usr/sbin/svcadm enable -t svc:/network/ldap/server:opendj
+    fi
+fi
+
+# Set environment variables
+SCRIPT_UTIL_CMD=set-full-server-environment-and-test-java
+export SCRIPT_UTIL_CMD
+.  "${INSTALL_ROOT}/lib/_script-util.sh"
+RETURN_CODE=$?
+if test ${RETURN_CODE} -ne 0
+then
+    exit ${RETURN_CODE}
+fi
+
+# Specify the locations of important files that may be used when the server
+# is starting.
+CONFIG_FILE=${INSTANCE_ROOT}/config/config.ldif
+PID_FILE=${INSTANCE_ROOT}/logs/server.pid
+LOG_FILE=${INSTANCE_ROOT}/logs/server.out
+STARTING_FILE=${INSTANCE_ROOT}/logs/server.starting
+
+# Copy of the constants in org.opends.server.core.StartDs java class
+SUCCESS=0
+SERVER_ALREADY_STARTED=98
+START_AS_DETACH=99
+START_AS_NON_DETACH=100
+START_AS_DETACH_QUIET=103
+START_AS_NON_DETACH_QUIET=104
+
+# Configure JFR is split into a dedicated function in order to avoid mutating the file-system when running start-ds -F
+configure_jfr() {
+    OPENDJ_JFR_ENABLED=${OPENDJ_JFR_ENABLED:-true}
+
+    if [ "${OPENDJ_JFR_ENABLED}" = "true" ]
+    then
+        OPENDJ_JFR_MAX_AGE=${OPENDJ_JFR_MAX_AGE:-"30m"}
+        # The overall goal is to balance between the size of JFR recordings and usefulness of information.
+        # This is achieved by disabling events that are not needed for the analysis and enabling events that are useful:
+        # * disable jdk.GCPhaseParallel events (as they are buggy and verbose, see https://bugs.openjdk.org/browse/JDK-8297693)
+        # * disable jdk.SocketRead events (as we do loads of them and don’t care)
+        # * disable jdk.ThreadPark events (many of these as well and we don’t care)
+        OPENDJ_JFR_EVENTS=${OPENDJ_JFR_EVENTS:-"jdk.GCPhaseParallel#enabled=false,jdk.SocketRead#enabled=false,jdk.ThreadPark#enabled=false"}
+        # The directory where the JFR recording should be saved
+        OPENDJ_JFR_DIR=${OPENDJ_JFR_DIR:-"${INSTANCE_ROOT}/var"}
+        # The directory where temporary JFR buffer files will be stored
+        OPENDJ_JFR_REPO_DIR=${OPENDJ_JFR_REPO_DIR:-"${INSTANCE_ROOT}/var/jfr"}
+        if ! [ -d "${OPENDJ_JFR_DIR}" ]
+        then
+            mkdir -p "${OPENDJ_JFR_DIR}" 2>/dev/null
+            if test $? -ne 0
+            then
+                echo "Could not create output directory for JFR: ${OPENDJ_JFR_DIR}"
+                # Fail the startup
+                exit 1;
+            fi
+        fi
+        # Disable JFR startup logging
+        OPENDJ_JFR_ARGS="-Xlog:jfr+startup=off
+                         -XX:NativeMemoryTracking=summary
+                         -XX:FlightRecorderOptions=repository=${OPENDJ_JFR_REPO_DIR}
+                         -XX:StartFlightRecording:maxage=${OPENDJ_JFR_MAX_AGE},${OPENDJ_JFR_EVENTS},dumponexit=true,filename=${OPENDJ_JFR_DIR}/ds-%t-%p.jfr"
+
+        # Roll the JFR files
+        OPENDJ_JFR_MAX_ROLLING_FILES=${OPENDJ_JFR_MAX_ROLLING_FILES:-10}
+        if [ -d "${OPENDJ_JFR_DIR}" ]
+        then
+            find "${OPENDJ_JFR_DIR}" -type f -name 'ds-*.jfr' | sort -r | tail -n +$((OPENDJ_JFR_MAX_ROLLING_FILES)) | xargs -I {} rm -f {}
+        fi
+        # Remove any old buffer files that may have been leftover from previous runs
+        if [ -d "${OPENDJ_JFR_REPO_DIR}" ]
+        then
+            find "${OPENDJ_JFR_REPO_DIR}" -type f -name '*.jfr' | xargs -I {} rm -f {}
+        fi
+    fi
+}
+
+# See if the provided set of arguments were sufficient for us to be able to
+# start the server or perform the requested operation.  An exit code of 99
+# means that it should be possible to start the server.  An exit code of 98
+# means that the server is already running and we shouldn't try to start it.
+# An exit code of anything else means that we're not trying to start the server
+# and we can just exit with that exit code.
+"${OPENDJ_JAVA_BIN}" -client ${SCRIPT_NAME_ARG} org.opends.server.core.DirectoryServer \
+            --configFile "${CONFIG_FILE}" --checkStartability "${@}"
+EC=${?}
+if test ${EC} -eq ${START_AS_DETACH} -o ${EC} -eq ${START_AS_DETACH_QUIET}
+then
+  #
+  # run detach
+  #
+  touch "${STARTING_FILE}"
+  configure_jfr
+  nohup "${OPENDJ_JAVA_BIN}" ${OPENDJ_JAVA_ARGS} ${OPENDJ_JFR_ARGS} ${SCRIPT_NAME_ARG} \
+       org.opends.server.core.DirectoryServer \
+       --configFile "${CONFIG_FILE}" "${@}" > "${LOG_FILE}" 2>&1 &
+  echo $! > "${PID_FILE}"
+  if test ${EC} -eq ${START_AS_DETACH}
+  then
+    "${OPENDJ_JAVA_BIN}" -client org.opends.server.tools.WaitForFileDelete \
+         --targetFile "${STARTING_FILE}" --logFile "${LOG_FILE}" "${@}"
+  else
+    "${OPENDJ_JAVA_BIN}" -client org.opends.server.tools.WaitForFileDelete \
+         --targetFile "${STARTING_FILE}" "${@}"
+  fi
+  EC=${?}
+  if test ${EC} -eq ${SUCCESS}
+  then
+    "${OPENDJ_JAVA_BIN}" -client ${SCRIPT_NAME_ARG} org.opends.server.core.DirectoryServer \
+           --configFile "${CONFIG_FILE}" --checkStartability > /dev/null 2>&1
+    EC=${?}
+    if test ${EC} -eq ${SERVER_ALREADY_STARTED}
+    then
+      # Server is already running
+      exit 0
+    else
+      # Could not start the server
+      exit 1
+    fi
+  fi
+  exit ${EC}
+else
+  if test ${EC} -eq ${START_AS_NON_DETACH}
+  then
+    #
+    # run no detach
+    #
+    echo $$ > "${PID_FILE}"
+    configure_jfr
+    rm -f "${LOG_FILE}"
+    exec "${OPENDJ_JAVA_BIN}" ${OPENDJ_JAVA_ARGS} ${OPENDJ_JFR_ARGS} ${SCRIPT_NAME_ARG} \
+      org.opends.server.core.DirectoryServer \
+      --configFile "${CONFIG_FILE}" "${@}"
+  elif test ${EC} -eq ${START_AS_NON_DETACH_QUIET}
+  then
+    #
+    # run no detach quiet
+    #
+    echo $$ > "${PID_FILE}"
+    configure_jfr
+    rm -f "${LOG_FILE}"
+    exec "${OPENDJ_JAVA_BIN}" ${OPENDJ_JAVA_ARGS} ${OPENDJ_JFR_ARGS} ${SCRIPT_NAME_ARG} \
+      org.opends.server.core.DirectoryServer \
+      --configFile "${CONFIG_FILE}" "${@}" > /dev/null
+  else
+    #
+    # an error or the server is already started.  Just return the code provided
+    # by checkstartability
+    #
+    exit ${EC}
+  fi
+fi

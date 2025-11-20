@@ -1,0 +1,1889 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.4",
+  "serialNumber" : "urn:uuid:c2cfc147-299c-46a2-ab15-128b4e38c6de",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2025-03-25T22:23:58Z",
+    "tools" : [ {
+      "vendor" : "Mend.io",
+      "name" : "CycloneDX report generator",
+      "version" : "1.0.0"
+    } ],
+    "authors" : [ {
+      "name" : "Organization: ForgeRock"
+    }, {
+      "name" : "Person: ci (ci@pingidentity.com)"
+    } ],
+    "component" : {
+      "name" : "opendj-hdap-servlet - sustaining-8.0.x",
+      "type" : "application",
+      "bom-ref" : "55525616-6cff-464f-a138-fcfc963032b2"
+    },
+    "properties" : [ {
+      "name" : "reportName",
+      "value" : "Product SBOM Report"
+    } ]
+  },
+  "components" : [ {
+    "group" : "org.forgerock.opendj",
+    "name" : "opendj-rest2ldap-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "version" : "8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7",
+    "description" : "NONE",
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opendj-rest2ldap-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "secrets-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "165a7ef0e98bd661a76e23347cbbb309b5e4c1d8"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "b5e50af7-3bac-4990-b413-479703af46b8"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "secrets-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.slf4j",
+    "name" : "jcl-over-slf4j-1.7.36.jar",
+    "version" : "1.7.36",
+    "description" : "JCL 1.2 implemented over SLF4J",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d877e195a05aca4a2f1ad2ff14bfec1393af4b5e"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "QOS.ch",
+    "purl" : "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.qos.ch"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.qos.ch"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "727ad677-1c4e-475a-b4d1-fa404e32da26"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jcl-over-slf4j-1.7.36.jar"
+  }, {
+    "group" : "io.swagger",
+    "name" : "swagger-models-1.5.16.jar",
+    "version" : "1.5.16",
+    "description" : "Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "9ab9141fab67ba48b5a60a66a8b0c4fd31944d1b"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0,Copyright 2016 SmartBear Software",
+    "purl" : "pkg:maven/io.swagger/swagger-models@1.5.16?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/swagger-api/swagger-core"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/swagger-api/swagger-core"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "106217a4-2c92-4f4f-ac3d-630804df5884"
+    } ],
+    "type" : "library",
+    "bom-ref" : "swagger-models-1.5.16.jar"
+  }, {
+    "group" : "org.slf4j",
+    "name" : "slf4j-api-1.7.36.jar",
+    "version" : "1.7.36",
+    "description" : "The slf4j API",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6c62681a2f655b49963a5983b8b0950a6120ae14"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "MIT",
+        "url" : "http://www.opensource.org/licenses/MIT"
+      }
+    } ],
+    "copyright" : "QOS.ch",
+    "purl" : "pkg:maven/org.slf4j/slf4j-api@1.7.36?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.qos.ch"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.qos.ch"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "f710c41b-a55b-4d5f-9e99-ce3615297d67"
+    } ],
+    "type" : "library",
+    "bom-ref" : "slf4j-api-1.7.36.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "secrets-backend-keystore-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "type" : "library",
+    "bom-ref" : "secrets-backend-keystore-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-databind-2.16.1.jar",
+    "version" : "2.16.1",
+    "description" : "General data-binding functionality for Jackson: works on core streaming API",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "02a16efeb840c45af1e2f31753dfe76795278b73"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "FasterXML,Copyright 2007 Tatu Saloranta (tatu.saloranta@iki.fi)",
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.16.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://fasterxml.com/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://fasterxml.com/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "88a656e4-0a95-46c6-aab5-b34db2276ac3"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jackson-databind-2.16.1.jar"
+  }, {
+    "group" : "com.google.guava",
+    "name" : "failureaccess-1.0.1.jar",
+    "version" : "1.0.1",
+    "description" : "Contains com.google.common.util.concurrent.internal.InternalFutureFailureAccess and InternalFutures. Most users will never need to use this artifact. Its classes is conceptually a part of Guava, but they're in this separate artifact so that Android libraries can use them without pulling in all of Guava (just as they can use ListenableFuture by depending on the listenablefuture artifact).",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "1dcf1de382a0bf95a3d8b0849546c88bac1292c9"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright Google Inc",
+    "purl" : "pkg:maven/com.google.guava/failureaccess@1.0.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/google/guava"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/google/guava"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "ed5ebc7c-109a-4b41-abeb-f204e4bea791"
+    } ],
+    "type" : "library",
+    "bom-ref" : "failureaccess-1.0.1.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-exporter-common-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry Exporter Common",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "2b72b77d5253ddc78eb85d2771030705c7e5d809"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-exporter-common@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "d3bd1dc9-77a9-4b75-bca5-c76f4a9f4445"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-exporter-common-1.45.0.jar"
+  }, {
+    "group" : "org.slf4j",
+    "name" : "slf4j-jdk14-1.7.36.jar",
+    "version" : "1.7.36",
+    "description" : "SLF4J JDK14 Binding",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "4a18af6554bfe48b0f76eec98119c417da23c7e1"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "MIT",
+        "url" : "http://www.opensource.org/licenses/MIT"
+      }
+    } ],
+    "copyright" : "QOS.ch",
+    "purl" : "pkg:maven/org.slf4j/slf4j-jdk14@1.7.36?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.qos.ch"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.qos.ch"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "b8b7a5a6-ab36-4bdc-bc8a-a11c901847a2"
+    } ],
+    "type" : "library",
+    "bom-ref" : "slf4j-jdk14-1.7.36.jar"
+  }, {
+    "group" : "org.apache.servicemix.bundles",
+    "name" : "org.apache.servicemix.bundles.jcip-annotations-1.0_2.jar",
+    "version" : "1.0_2",
+    "description" : "This OSGi bundle wraps jcip-annotations 1.0 jar file.",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "d6c402ef4acdbd9d467465f7b19f88f4dfea70ff"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright 2005-2012 The Apache Software Foundation",
+    "purl" : "pkg:maven/org.apache.servicemix.bundles/org.apache.servicemix.bundles.jcip-annotations@1.0_2?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.apache.org/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.apache.org/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "cb40fdf6-1186-4a3c-bff7-a91c1e0db34a"
+    } ],
+    "type" : "library",
+    "bom-ref" : "org.apache.servicemix.bundles.jcip-annotations-1.0-2.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-trace-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry SDK For Tracing",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "08f7d2d06fbd62e644fae5f895934fe27efa2579"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk-trace@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "b7431140-c19a-4d16-8050-0ae123118fe6"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-trace-1.45.0.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-metrics-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry SDK Metrics",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a8e5402cdef9d0f3174308fa2be83a17a746a21e"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk-metrics@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "663aef2a-6e03-4f07-8d0a-ce7212bbafce"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-metrics-1.45.0.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-api-incubator-1.45.0-alpha.jar",
+    "version" : "1.45.0-alpha",
+    "description" : "OpenTelemetry API Incubator",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "0cc65a1e165136850c086a45d13f75e8985e22b3"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-api-incubator@1.45.0-alpha",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "c71ff717-7d76-43ae-a1db-43f504fdc1df"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-api-incubator-1.45.0-alpha.jar"
+  }, {
+    "group" : "org.checkerframework",
+    "name" : "checker-qual-3.19.0.jar",
+    "version" : "3.19.0",
+    "description" : "checker-qual contains annotations (type qualifiers) that a programmer writes to specify Java code for type-checking by the Checker Framework.",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "838b42bb6f7f73315167b359d24649845cef1c48"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "MIT",
+        "url" : "http://www.opensource.org/licenses/MIT"
+      }
+    } ],
+    "copyright" : "Copyright 2004 by the Checker Framework developers,Copyright 2004 by the Checker Framework developers",
+    "purl" : "pkg:maven/org.checkerframework/checker-qual@3.19.0?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://checkerframework.org"
+    }, {
+      "type" : "distribution",
+      "url" : "https://checkerframework.org"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "57777495-4dec-489a-84b9-dcbaa7b0092d"
+    } ],
+    "type" : "library",
+    "bom-ref" : "checker-qual-3.19.0.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "api-descriptor-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "72d81b887fe7aa13d5ca823549644c4d0b51cd3b"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "561ef06d-fa59-4fb4-babd-c3b8c6320b5a"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "api-descriptor-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpclient-osgi-4.5.13-forgerock.jar",
+    "version" : "4.5.13-forgerock",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "68e37300105d09bbf11eb3f48ad1ca56021a17bd"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Unspecified Copyright",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "da498ec7-db66-4276-a81c-f05af68765d9"
+    } ],
+    "type" : "library",
+    "bom-ref" : "httpclient-osgi-4.5.13-forgerock.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-logs-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry Log SDK",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "85ff12e6d676464001844d8cbf1abc240c90b731"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk-logs@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "93db9b43-c9b6-4354-b523-b989470121e7"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-logs-1.45.0.jar"
+  }, {
+    "group" : "org.reactivestreams",
+    "name" : "reactive-streams-1.0.4.jar",
+    "version" : "1.0.4",
+    "description" : "A Protocol for Asynchronous Non-Blocking Data Sequence",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "3864a1320d97d7b045f729a326e1e077661f31b7"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "MIT-0",
+        "url" : "https://opensource.org/license/MIT-0"
+      }
+    } ],
+    "copyright" : "Copyright 5000 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and as",
+    "purl" : "pkg:maven/org.reactivestreams/reactive-streams@1.0.4",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.reactive-streams.org/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.reactive-streams.org/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "03a5c669-d519-4679-b0f6-2eaf2742a759"
+    } ],
+    "type" : "library",
+    "bom-ref" : "reactive-streams-1.0.4.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "json-schema-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "0a689f7fbac23fdca090ddeb8c16810bdd3723ea"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "33d08ef3-737e-42e2-988c-d5a65661fae9"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "json-schema-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "forgerock-util-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "13879930bdc40dff2348e6ac25bd797cb63bb201"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "a8d5e61e-470d-42a3-8b78-8fc932bc66c2"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "forgerock-util-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-core-2.16.1.jar",
+    "version" : "2.16.1",
+    "description" : "Core Jackson processing abstractions (aka Streaming API), implementation for JSON",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "9456bb3cdd0f79f91a5f730a1b1bb041a380c91f"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "FasterXML,Copyright 2023 Werner Randelshofer, Switzerland,Copyright 2021 The fast_float authors,Copyright 2023 Werner Randelshofer, Switzerland,Copyright 2022 Daniel Lemire,Copyright 2020 Tim Buktu. 2-clause BSD License,Copyright 2007 Tatu Saloranta (tatu.saloranta@iki.fi)",
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.16.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://fasterxml.com/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://fasterxml.com/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "46edcdf9-744a-44a8-9aa0-5ba012d65ac3"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jackson-core-2.16.1.jar"
+  }, {
+    "group" : "org.forgerock.opendj",
+    "name" : "opendj-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "version" : "8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7",
+    "description" : "NONE",
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opendj-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar"
+  }, {
+    "group" : "com.google.errorprone",
+    "name" : "error_prone_annotations-2.18.0.jar",
+    "version" : "2.18.0",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "89b684257096f548fa39a7df9fdaa409d4d4df91"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright 2015 The Error Prone Authors",
+    "purl" : "pkg:maven/com.google.errorprone/error_prone_annotations@2.18.0?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.google.com"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.google.com"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "82d9e5e9-b2dc-4f61-a30c-96fb3045bb89"
+    } ],
+    "type" : "library",
+    "bom-ref" : "error-prone-annotations-2.18.0.jar"
+  }, {
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpcore-osgi-4.4.15.jar",
+    "version" : "4.4.15",
+    "description" : "Apache HttpComponents Core (OSGi bundle)",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "6d1a2b0b2450288fec9028a915d7077cee6be7ea"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "The Apache Software Foundation,Copyright 2005-2021 The Apache Software Foundation",
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.15?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.apache.org/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.apache.org/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "310a4c4c-a427-48b6-a6ad-632753292118"
+    } ],
+    "type" : "library",
+    "bom-ref" : "httpcore-osgi-4.4.15.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-extension-autoconfigure-spi-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry SDK Auto-configuration SPI",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a9003ec68d8fbc715e76d7de31ecc111b63eaf84"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "29093dcf-f889-4118-8b0b-5721c9300d5f"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-extension-autoconfigure-spi-1.45.0.jar"
+  }, {
+    "group" : "org.forgerock.http",
+    "name" : "chf-http-servlet5-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "03580aaa7a64d8c058e36af2b0b45528f370a25e"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "9a33dfac-1964-4f50-b2c4-69433bdfbcfd"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "chf-http-servlet5-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.fasterxml.jackson.module",
+    "name" : "jackson-module-jsonSchema-2.16.1.jar",
+    "version" : "2.16.1",
+    "description" : "Add-on module for Jackson (http://jackson.codehaus.org) to support JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "c8b9fef78622143a152f10db8747d6e903eb3fa4"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "2011 FasterXML, LLC.",
+    "purl" : "pkg:maven/com.fasterxml.jackson.module/jackson-module-jsonSchema@2.16.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://fasterxml.com/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://fasterxml.com/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "3b3b2310-69f7-45cc-a672-e344cc14dd5b"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jackson-module-jsonSchema-2.16.1.jar"
+  }, {
+    "group" : "org.apache.httpcomponents",
+    "name" : "httpasyncclient-osgi-4.1.4.jar",
+    "version" : "4.1.4",
+    "description" : "Apache HttpComponents AsyncClient (OSGi bundle)",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "a60872240a5ac8b8e1b9a5b6b4df3763cfbe2b76"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright 2010-2018 The Apache Software Foundation,The Apache Software Foundation",
+    "purl" : "pkg:maven/org.apache.httpcomponents/httpasyncclient-osgi@4.1.4?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.apache.org/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.apache.org/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "9c522b5a-d45c-4e4e-8b37-6adb1bad9faa"
+    } ],
+    "type" : "library",
+    "bom-ref" : "httpasyncclient-osgi-4.1.4.jar"
+  }, {
+    "group" : "javax.activation",
+    "name" : "activation-1.1.jar",
+    "version" : "1.1",
+    "description" : "JavaBeans Activation Framework (JAF) is a standard extension to the Java platform that lets you take advantage of standard services to: determine the type of an arbitrary piece of data; encapsulate access to it; discover the operations available on it; and instantiate the appropriate bean to perform the operation(s).",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "e6cb541461c2834bdea3eb920f1884d1eb508b50"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "CDDL-1.1",
+        "url" : "http://glassfish.java.net/public/CDDL+GPL_1_1.html"
+      }
+    } ],
+    "copyright" : "Copyright Oracle,Copyright 2023 Oracle",
+    "purl" : "pkg:maven/javax.activation/activation@1.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://java.sun.com/products/javabeans/jaf/index.jsp"
+    }, {
+      "type" : "distribution",
+      "url" : "http://java.sun.com/products/javabeans/jaf/index.jsp"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "15848082-10c3-4be6-8800-98ff6d8182b4"
+    } ],
+    "type" : "library",
+    "bom-ref" : "activation-1.1.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-context-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry Context (Incubator)",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "8f7b6d5f9de7ad90703c3db5d9ff8f7d7c5ffbbf"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-context@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "50e9048a-41f4-4b43-a46c-24c58c32d12f"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-context-1.45.0.jar"
+  }, {
+    "group" : "org.forgerock.http",
+    "name" : "chf-http-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "159bfe4503ebfa7c8d84d5886261c0617ec8c7fb"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "37b3db1e-a55a-4db4-ad83-89e43102df87"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "chf-http-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "io.opentelemetry.semconv",
+    "name" : "opentelemetry-semconv-1.29.0-alpha.jar",
+    "version" : "1.29.0-alpha",
+    "description" : "OpenTelemetry Stable Semantic Conventions generated classes for Java",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "613d7f7743eb2b974680ad1af1685802e6a7cb58"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry.semconv/opentelemetry-semconv@1.29.0-alpha",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/semantic-conventions-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/semantic-conventions-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "84c6f249-2f74-4402-88b0-eb4805dddf2e"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-semconv-1.29.0-alpha.jar"
+  }, {
+    "group" : "com.google.guava",
+    "name" : "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    "version" : "9999.0-empty-to-avoid-conflict-with-guava",
+    "description" : "An empty artifact that Guava depends on to signal that it is providing ListenableFuture -- but is also available in a second \"version\" that contains com.google.common.util.concurrent.ListenableFuture class, without any other Guava classes. The idea is: - If users want only ListenableFuture, they depend on listenablefuture-1.0. - If users want all of Guava, they depend on guava, which, as of Guava 27.0, depends on listenablefuture-9999.0-empty-to-avoid-conflict-with-guava. The 9999.0-... version number is enough for some build systems (notably, Gradle) to select that empty artifact over the \"real\" listenablefuture-1.0 -- avoiding a conflict with the copy of ListenableFuture in guava itself. If users are using an older version of Guava or a build system other than Gradle, they may see class conflicts. If so, they can solve them by manually excluding the listenablefuture artifact or manually forcing their build systems to use 9999.0-....",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "b421526c5f297295adef1c886e5246c39d4ac629"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright Google Inc",
+    "purl" : "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/google/guava"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/google/guava"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "c55029ae-a336-4556-ba9e-04ffffbee184"
+    } ],
+    "type" : "library",
+    "bom-ref" : "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
+  }, {
+    "group" : "com.fasterxml.jackson.core",
+    "name" : "jackson-annotations-2.16.1.jar",
+    "version" : "2.16.1",
+    "description" : "Core annotations used for value types, used by Jackson data binding package.",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "fd441d574a71e7d10a4f73de6609f881d8cdfeec"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "FasterXML,Copyright 2007 Tatu Saloranta (tatu.saloranta@iki.fi)",
+    "purl" : "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.16.1?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://fasterxml.com/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://fasterxml.com/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "56917232-2939-4a81-95d2-73f14f6e847f"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jackson-annotations-2.16.1.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-exporter-otlp-common-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry Protocol Exporter",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "029d1d03d3a63e9b7db64b28d6adfc267e564158"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp-common@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "bef64cde-c9e5-4158-af6f-4e2d78a17765"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-exporter-otlp-common-1.45.0.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-common-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry SDK Common",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "f977e13bbf27ddead5152488c26391891012e760"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk-common@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "d362f73f-9712-4bf1-a786-fe5452f54cdd"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-common-1.45.0.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-api-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry API",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "2f538da4ac84ae2b0dce1a1f9c54cd68bf979774"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-api@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "65ed2aff-12d3-4874-825d-5a0a73427780"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-api-1.45.0.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "opentelemetry-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.google.code.findbugs",
+    "name" : "jsr305-3.0.2.jar",
+    "version" : "3.0.2",
+    "description" : "JSR305 Annotations for Findbugs",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "25ea2e8b0c338a877313bd4672d3fe056ea78f0d"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright (c)",
+    "purl" : "pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://findbugs.sourceforge.net/"
+    }, {
+      "type" : "distribution",
+      "url" : "http://findbugs.sourceforge.net/"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "adbe55a5-1d55-4aed-9dae-2b5cba8886e5"
+    } ],
+    "type" : "library",
+    "bom-ref" : "jsr305-3.0.2.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-exporter-otlp-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry Protocol (OTLP) Exporters",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "46b617a80f6040f0a6587f3010139a453ecd1ba5"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "124e7a88-1e88-4b60-8d5a-0c925ac36d32"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-exporter-otlp-1.45.0.jar"
+  }, {
+    "group" : "javax.validation",
+    "name" : "validation-api-1.1.0.Final.jar",
+    "version" : "1.1.0.Final",
+    "description" : "Bean Validation API",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "8613ae82954779d518631e05daa73a6a954817d5"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright Red Hat Inc,Copyright (c)",
+    "purl" : "pkg:maven/javax.validation/validation-api@1.1.0.Final?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://beanvalidation.org"
+    }, {
+      "type" : "distribution",
+      "url" : "http://beanvalidation.org"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "75a94bb2-6397-49d4-b036-a57f2ae9cfe2"
+    } ],
+    "type" : "library",
+    "bom-ref" : "validation-api-1.1.0.Final.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-sdk-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry SDK",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ab61b1f048cb5d42607f3ce1f15ce9db4871e624"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-sdk@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "28423814-c14b-4f01-8a88-6890d7c2a4a3"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-sdk-1.45.0.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "1d629f8b728edcdcd9b9aeef861223ab0dc42592"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "01f7171e-9126-4043-99f5-2329cb387ba2"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.forgerock.http",
+    "name" : "chf-oauth2-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "424332452cf64f38a644a94e7e9f44d72fb7615f"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "27a738ad-32a2-4288-9fda-745dab8f0edf"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "chf-oauth2-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "io.opentelemetry",
+    "name" : "opentelemetry-exporter-sender-jdk-1.45.0.jar",
+    "version" : "1.45.0",
+    "description" : "OpenTelemetry JDK HttpSender",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "0e403d5278b3ef456aa4b5a3b799ae570e5f25d1"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "NONE",
+    "purl" : "pkg:maven/io.opentelemetry/opentelemetry-exporter-sender-jdk@1.45.0",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/open-telemetry/opentelemetry-java"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "77544843-3b44-4b5a-8bd1-84d3cb8b5c33"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opentelemetry-exporter-sender-jdk-1.45.0.jar"
+  }, {
+    "group" : "io.reactivex.rxjava3",
+    "name" : "rxjava-3.1.5.jar",
+    "version" : "3.1.5",
+    "description" : "Reactive Extensions for Java",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "f640172f6d3a066ef68b185b321059ecfc63a890"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Copyright 2016 RxJava Contributors",
+    "purl" : "pkg:maven/io.reactivex.rxjava3/rxjava@3.1.5?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/ReactiveX/RxJava"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/ReactiveX/RxJava"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "3ff4c5c9-342a-467b-8860-02c01e0628dc"
+    } ],
+    "type" : "library",
+    "bom-ref" : "rxjava-3.1.5.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "json-web-token-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "8df89c0ffa2632ae108c599ce86b0f1499a3ed78"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "0b3f4440-586e-4636-a2e9-60b4517b7601"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "json-web-token-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.forgerock.http",
+    "name" : "chf-client-apache-async-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "0194aad983f6fde964ed9c68f9e4125243aca10c"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "d6a5fa8b-ae5b-49e9-8767-d888b71ddc2e"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "chf-client-apache-async-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.sun.mail",
+    "name" : "javax.mail-1.6.2.jar",
+    "version" : "1.6.2",
+    "description" : "${project.name}",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "935151eb71beff17a2ffac15dd80184a99a0514f"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "CDDL-1.1",
+        "url" : "http://glassfish.java.net/public/CDDL+GPL_1_1.html"
+      }
+    } ],
+    "copyright" : "Copyright 2018 Oracle",
+    "purl" : "pkg:maven/com.sun.mail/javax.mail@1.6.2?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "http://www.oracle.com"
+    }, {
+      "type" : "distribution",
+      "url" : "http://www.oracle.com"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "0abdcd0a-12ba-4524-8c81-8d889d394817"
+    } ],
+    "type" : "library",
+    "bom-ref" : "javax.mail-1.6.2.jar"
+  }, {
+    "group" : "org.forgerock.http",
+    "name" : "chf-client-apache-common-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "209ab8a7f811f6d34426c1fd2aa28d7000f39928"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "4eeab5c8-dc8b-4edf-b6df-a5914c644350"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "chf-client-apache-common-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "com.google.guava",
+    "name" : "guava-32.1.1-jre.jar",
+    "version" : "32.1.1-jre",
+    "description" : "Guava is a suite of core and expanded libraries that include utility classes, Google's collections, I/O classes, and much more.",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "ad575652d84153075dd41ec6177ccb15251262b2"
+    } ],
+    "licenses" : [ {
+      "license" : {
+        "id" : "Apache-2.0",
+        "url" : "http://apache.org/licenses/LICENSE-2.0"
+      }
+    } ],
+    "copyright" : "Unspecified Copyright",
+    "purl" : "pkg:maven/com.google.guava/guava@32.1.1-jre?type=jar",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "https://github.com/google/guava"
+    }, {
+      "type" : "distribution",
+      "url" : "https://github.com/google/guava"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "dc18eb8c-7c7d-4d28-970c-4421e7e9f3cf"
+    } ],
+    "type" : "library",
+    "bom-ref" : "guava-32.1.1-jre.jar"
+  }, {
+    "group" : "org.forgerock.commons",
+    "name" : "json-resource-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "version" : "27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982",
+    "description" : "NONE",
+    "hashes" : [ {
+      "alg" : "SHA-1",
+      "content" : "87f504b369055a9e289b53c5f32ba862c1b0c235"
+    } ],
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "properties" : [ {
+      "name" : "pkgType",
+      "value" : "MAVEN_ARTIFACT"
+    }, {
+      "name" : "pkgUuid",
+      "value" : "e2415e6d-431a-4eab-b307-3de50d0d746d"
+    }, {
+      "name" : "isProprietary",
+      "value" : "true"
+    } ],
+    "type" : "library",
+    "bom-ref" : "json-resource-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar"
+  }, {
+    "group" : "org.forgerock.opendj",
+    "name" : "opendj-opentelemetry-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "version" : "8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7",
+    "description" : "NONE",
+    "licenses" : [ {
+      "expression" : "NONE"
+    } ],
+    "copyright" : "NONE",
+    "externalReferences" : [ {
+      "type" : "website",
+      "url" : "NONE"
+    }, {
+      "type" : "distribution",
+      "url" : "NONE"
+    } ],
+    "type" : "library",
+    "bom-ref" : "opendj-opentelemetry-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar"
+  } ],
+  "dependencies" : [ {
+    "ref" : "slf4j-api-1.7.36.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "slf4j-jdk14-1.7.36.jar",
+    "dependsOn" : [ "slf4j-api-1.7.36.jar" ]
+  }, {
+    "ref" : "validation-api-1.1.0.Final.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jackson-module-jsonSchema-2.16.1.jar",
+    "dependsOn" : [ "validation-api-1.1.0.Final.jar" ]
+  }, {
+    "ref" : "json-schema-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "failureaccess-1.0.1.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "error-prone-annotations-2.18.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "checker-qual-3.19.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jsr305-3.0.2.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "guava-32.1.1-jre.jar",
+    "dependsOn" : [ "failureaccess-1.0.1.jar", "error-prone-annotations-2.18.0.jar", "checker-qual-3.19.0.jar", "jsr305-3.0.2.jar", "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" ]
+  }, {
+    "ref" : "api-descriptor-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "jackson-module-jsonSchema-2.16.1.jar", "json-schema-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "guava-32.1.1-jre.jar" ]
+  }, {
+    "ref" : "json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "api-descriptor-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar" ]
+  }, {
+    "ref" : "org.apache.servicemix.bundles.jcip-annotations-1.0-2.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opendj-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "dependsOn" : [ "org.apache.servicemix.bundles.jcip-annotations-1.0-2.jar" ]
+  }, {
+    "ref" : "httpasyncclient-osgi-4.1.4.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jcl-over-slf4j-1.7.36.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "httpcore-osgi-4.4.15.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "httpclient-osgi-4.5.13-forgerock.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "chf-client-apache-common-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "jcl-over-slf4j-1.7.36.jar", "httpcore-osgi-4.4.15.jar", "httpclient-osgi-4.5.13-forgerock.jar" ]
+  }, {
+    "ref" : "chf-client-apache-async-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "httpasyncclient-osgi-4.1.4.jar", "chf-client-apache-common-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar" ]
+  }, {
+    "ref" : "chf-oauth2-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "secrets-backend-keystore-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "json-web-token-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "activation-1.1.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "javax.mail-1.6.2.jar",
+    "dependsOn" : [ "activation-1.1.jar" ]
+  }, {
+    "ref" : "json-resource-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "javax.mail-1.6.2.jar" ]
+  }, {
+    "ref" : "opentelemetry-api-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-context-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opendj-opentelemetry-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "dependsOn" : [ "opentelemetry-api-1.45.0.jar", "opentelemetry-context-1.45.0.jar" ]
+  }, {
+    "ref" : "opentelemetry-exporter-sender-jdk-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-api-incubator-1.45.0-alpha.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-sdk-trace-1.45.0.jar",
+    "dependsOn" : [ "opentelemetry-api-incubator-1.45.0-alpha.jar" ]
+  }, {
+    "ref" : "opentelemetry-sdk-common-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-sdk-logs-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-sdk-metrics-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-sdk-1.45.0.jar",
+    "dependsOn" : [ "opentelemetry-sdk-trace-1.45.0.jar", "opentelemetry-sdk-common-1.45.0.jar", "opentelemetry-sdk-logs-1.45.0.jar", "opentelemetry-sdk-metrics-1.45.0.jar" ]
+  }, {
+    "ref" : "opentelemetry-sdk-extension-autoconfigure-spi-1.45.0.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-exporter-common-1.45.0.jar",
+    "dependsOn" : [ "opentelemetry-sdk-extension-autoconfigure-spi-1.45.0.jar" ]
+  }, {
+    "ref" : "opentelemetry-exporter-otlp-common-1.45.0.jar",
+    "dependsOn" : [ "opentelemetry-exporter-common-1.45.0.jar" ]
+  }, {
+    "ref" : "opentelemetry-exporter-otlp-1.45.0.jar",
+    "dependsOn" : [ "opentelemetry-exporter-otlp-common-1.45.0.jar" ]
+  }, {
+    "ref" : "opentelemetry-semconv-1.29.0-alpha.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "opentelemetry-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "opentelemetry-exporter-sender-jdk-1.45.0.jar", "opentelemetry-sdk-1.45.0.jar", "opentelemetry-exporter-otlp-1.45.0.jar", "opentelemetry-semconv-1.29.0-alpha.jar" ]
+  }, {
+    "ref" : "opendj-rest2ldap-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar",
+    "dependsOn" : [ "json-resource-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "opendj-core-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar", "chf-client-apache-async-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "chf-oauth2-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "secrets-backend-keystore-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "json-web-token-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "json-resource-http-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "opendj-opentelemetry-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar", "opentelemetry-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar" ]
+  }, {
+    "ref" : "forgerock-util-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "secrets-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jackson-annotations-2.16.1.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jackson-core-2.16.1.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "jackson-databind-2.16.1.jar",
+    "dependsOn" : [ "jackson-annotations-2.16.1.jar", "jackson-core-2.16.1.jar" ]
+  }, {
+    "ref" : "reactive-streams-1.0.4.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "rxjava-3.1.5.jar",
+    "dependsOn" : [ "reactive-streams-1.0.4.jar" ]
+  }, {
+    "ref" : "swagger-models-1.5.16.jar",
+    "dependsOn" : [ ]
+  }, {
+    "ref" : "chf-http-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "forgerock-util-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "secrets-api-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar", "jackson-databind-2.16.1.jar", "rxjava-3.1.5.jar", "swagger-models-1.5.16.jar" ]
+  }, {
+    "ref" : "chf-http-servlet5-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar",
+    "dependsOn" : [ "chf-http-core-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar" ]
+  }, {
+    "ref" : "55525616-6cff-464f-a138-fcfc963032b2",
+    "dependsOn" : [ "slf4j-jdk14-1.7.36.jar", "opendj-rest2ldap-8.0.0-20250325155403-f2600018d0921056968330bb64a76dba6ee4a9b7.jar", "chf-http-servlet5-27.0.0-20250228233241-84008dd5f1fd44fb2ea68ed78489d3881761b982.jar" ]
+  } ]
+}

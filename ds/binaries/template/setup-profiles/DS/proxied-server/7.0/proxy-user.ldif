@@ -1,0 +1,19 @@
+#
+# Copyright 2020-2025 Ping Identity Corporation. All Rights Reserved
+#
+# This code is to be used exclusively in connection with Ping Identity
+# Corporation software or services. Ping Identity Corporation only offers
+# such software or services to legal entities who have entered into a
+# binding license agreement with Ping Identity Corporation.
+#
+dn: &{DS_PROXIED_SERVER_USER_DN}
+objectClass: top
+objectClass: untypedObject
+objectClass: ds-certificate-user
+ds-certificate-subject-dn: &{DS_PROXIED_SERVER_SUBJECT_DN}
+ds-privilege-name: config-read
+ds-privilege-name: monitor-read
+ds-privilege-name: proxied-auth
+aci: (targetcontrol="ProxiedAuthV2")
+ (version 3.0; acl "Allow proxied authorization";
+ allow(read) userdn="ldap:///&{DS_PROXIED_SERVER_USER_DN}";)

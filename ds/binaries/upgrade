@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# The contents of this file are subject to the terms of the Common Development and
+# Distribution License (the License). You may not use this file except in compliance with the
+# License.
+#
+# You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License for the
+# specific language governing permission and limitations under the License.
+#
+# When distributing Covered Software, include this CDDL Header Notice in each file and include
+# the License file at legal/CDDLv1.0.txt. If applicable, add the following below the CDDL
+# Header, with the fields enclosed by brackets [] replaced by your own identifying
+# information: "Portions Copyright [year] [name of copyright owner]".
+#
+# Copyright 2013-2025 Ping Identity Corporation.
+
+
+# This script may be used to perform a backup of a Directory Server backend.
+OPENDJ_INVOKE_CLASS="org.opends.server.tools.upgrade.UpgradeCli"
+export OPENDJ_INVOKE_CLASS
+
+SCRIPT_NAME="upgrade"
+export SCRIPT_NAME
+
+SCRIPT_DIR=`dirname "${0}"`
+
+INSTALL_ROOT=${SCRIPT_DIR}
+export INSTALL_ROOT
+
+# Set environment variables
+SCRIPT_UTIL_CMD=set-environment-vars
+export SCRIPT_UTIL_CMD
+.  "${INSTALL_ROOT}/lib/_script-util.sh"
+RETURN_CODE=$?
+if test ${RETURN_CODE} -ne 0
+then
+  exit ${RETURN_CODE}
+fi
+
+# Patches must be disabled before the upgrade.
+DIR_CLASSES="${INSTANCE_ROOT}/classes"
+DIR_DISABLED="${INSTANCE_ROOT}/classes.disabled"
+if [ -e "${DIR_CLASSES}" ]; then
+  [ -e "${DIR_DISABLED}" ] && rm -fr "${DIR_DISABLED}"
+  mv -f "${DIR_CLASSES}" "${DIR_DISABLED}"
+  RETURN_CODE=$?
+  [ ${RETURN_CODE} -ne 0 ] && exit ${RETURN_CODE}
+  mkdir "${DIR_CLASSES}"
+fi
+
+"${SCRIPT_DIR}/lib/_client-script.sh" "${@}"

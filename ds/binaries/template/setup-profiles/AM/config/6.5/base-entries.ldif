@@ -1,0 +1,35 @@
+#
+# Copyright 2011-2025 Ping Identity Corporation. All Rights Reserved
+#
+# This code is to be used exclusively in connection with Ping Identity
+# Corporation software or services. Ping Identity Corporation only offers
+# such software or services to legal entities who have entered into a
+# binding license agreement with Ping Identity Corporation.
+#
+
+dn: &{AM_CONFIG_BASE_DN}
+objectclass: top
+objectclass: untypedObject
+aci: (targetattr="*")(version 3.0; acl "Read and write application data"; allow (all)
+ (userdn = "ldap:///uid=am-config,ou=admins,&{AM_CONFIG_BASE_DN}");)
+aci: (targetattr="+")(version 3.0; acl "Read operational attributes"; allow (read, search, compare)
+ (userdn = "ldap:///uid=am-config,ou=admins,&{AM_CONFIG_BASE_DN}");)
+aci: (targetcontrol="PersistentSearch")(version 3.0; acl "Persistent searches"; allow (read)
+ (userdn = "ldap:///uid=am-config,ou=admins,&{AM_CONFIG_BASE_DN}");)
+
+dn: ou=admins,&{AM_CONFIG_BASE_DN}
+objectclass: top
+objectclass: organizationalUnit
+ou: admins
+
+dn: uid=am-config,ou=admins,&{AM_CONFIG_BASE_DN}
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: AM Configuration Admin
+sn: AM
+uid: openam_config
+userPassword: &{AM_CONFIG_ADMIN_PASSWORD}
+ds-privilege-name: subentry-write
+ds-privilege-name: update-schema

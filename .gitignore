@@ -1,0 +1,11 @@
+# Java / build artifacts
+*.war
+*.jar
+target/
+build/
+out/
+
+# IDE stuff (optional)
+.idea/
+.vscode/
+*.iml

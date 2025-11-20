@@ -1,0 +1,23 @@
+#
+# Copyright 2022-2025 Ping Identity Corporation. All Rights Reserved
+#
+# This code is to be used exclusively in connection with Ping Identity
+# Corporation software or services. Ping Identity Corporation only offers
+# such software or services to legal entities who have entered into a
+# binding license agreement with Ping Identity Corporation.
+#
+dn: cn=schema
+attributeTypes: ( 1.3.6.1.4.1.36733.2.2.1.14
+  NAME 'boundDevices'
+  DESC 'Bound Device JSON data'
+  SYNTAX 1.3.6.1.4.1.36733.2.1.3.1
+  X-STABILITY 'Internal'
+  X-ORIGIN 'OpenAM' )
+objectClasses: ( 1.3.6.1.4.1.36733.2.2.2.14
+  NAME 'boundDevicesContainer'
+  DESC 'Class containing bound device'
+  SUP top
+  AUXILIARY
+  MAY ( boundDevices )
+  X-STABILITY 'Internal'
+  X-ORIGIN 'OpenAM' )

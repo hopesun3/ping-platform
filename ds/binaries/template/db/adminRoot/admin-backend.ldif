@@ -1,0 +1,19 @@
+#
+# Copyright 2025 Ping Identity Corporation. All Rights Reserved
+#
+# This code is to be used exclusively in connection with Ping Identity
+# Corporation software or services. Ping Identity Corporation only offers
+# such software or services to legal entities who have entered into a
+# binding license agreement with Ping Identity Corporation.
+#
+dn: cn=admin data
+objectClass: ds-cfg-branch
+objectClass: top
+cn: admin data
+entryUUID: 46e489f6-1f92-3120-990f-54a178e95b21
+
+dn: cn=secret keys,cn=admin data
+objectClass: ds-cfg-branch
+objectClass: top
+cn: secret keys
+entryUUID: 26176404-8825-3f77-9efd-c52bd4061f3b
