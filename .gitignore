@@ -1,5 +1,4 @@
 # Java / build artifacts
-*.war
 *.jar
 target/
 build/
