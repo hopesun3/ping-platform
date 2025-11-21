@@ -4,7 +4,6 @@ pipeline {
     options {
         // Keep logs readable
         timestamps()
-        ansiColor('xterm')
     }
 
     parameters {
