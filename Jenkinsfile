@@ -12,7 +12,7 @@ pipeline {
         string(name: 'IMAGE_TAG', defaultValue: 'latest', description: 'Tag to use for Docker images')
 
         // If you want to deploy on every build or just build
-        booleanParam(name: 'DEPLOY', defaultValue: true, description: 'Run docker compose up -d after build')
+        booleanParam(name: 'DEPLOY', defaultValue: true, description: 'Run docker-compose up -d after build')
     }
 
     environment {
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Docker Login (optional)') {
             when {
-                expression { return false } // flip to true when you add a registry + credentials
+                expression { return false } // flip to true when you add registry + credentials
             }
             steps {
                 echo "Logging into Docker registry (configure credentials and logic here)"
@@ -43,7 +43,7 @@ pipeline {
         stage('Build Images') {
             steps {
                 script {
-                    sh '''
+                    sh """
                       echo "Building DS and AM images with tag: ${IMAGE_TAG}"
 
                       # Build DS
@@ -55,7 +55,7 @@ pipeline {
                       docker build \
                         -t ${AM_IMAGE}:${IMAGE_TAG} \
                         -f am/Dockerfile .
-                    '''
+                    """
                 }
             }
         }
@@ -63,10 +63,10 @@ pipeline {
         stage('Compose Build (optional)') {
             steps {
                 script {
-                    sh '''
-                      echo "Running docker compose build to ensure service definitions are valid..."
-                      docker compose build
-                    '''
+                    sh """
+                      echo "Running docker-compose build to ensure service definitions are valid..."
+                      docker-compose build
+                    """
                 }
             }
         }
@@ -80,20 +80,20 @@ pipeline {
             }
         }
 
-        stage('Deploy with docker compose') {
+        stage('Deploy with docker-compose') {
             when {
                 expression { return params.DEPLOY }
             }
             steps {
                 script {
-                    sh '''
-                      echo "Bringing up stack with docker compose..."
-                      docker compose down
-                      docker compose up -d
+                    sh """
+                      echo "Bringing up stack with docker-compose..."
+                      docker-compose down
+                      docker-compose up -d
 
                       echo "Current containers:"
-                      docker compose ps
-                    '''
+                      docker-compose ps
+                    """
                 }
             }
         }
@@ -104,13 +104,13 @@ pipeline {
             }
             steps {
                 script {
-                    sh '''
+                    sh """
                       echo "Tagging and pushing images to registry..."
                       # docker tag ${DS_IMAGE}:${IMAGE_TAG} your.registry.example.com/${DS_IMAGE}:${IMAGE_TAG}
                       # docker tag ${AM_IMAGE}:${IMAGE_TAG} your.registry.example.com/${AM_IMAGE}:${IMAGE_TAG}
                       # docker push your.registry.example.com/${DS_IMAGE}:${IMAGE_TAG}
                       # docker push your.registry.example.com/${AM_IMAGE}:${IMAGE_TAG}
-                    '''
+                    """
                 }
             }
         }
